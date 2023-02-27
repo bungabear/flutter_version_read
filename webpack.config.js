@@ -2,7 +2,7 @@ const { resolve } = require('path')
 
 module.exports = {
     mode: 'production',
-    entry: './src/index.js',
+    entry: '/src/index.js',
     target: 'node',
     resolve: {
         fallback: {
