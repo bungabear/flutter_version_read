@@ -1,10 +1,7 @@
 const core = require("@actions/core");
 const fs = require('fs');
 
-let file = core.getInput("file", {required: false, });
-if(file === undefined || file === null || file === '') {
-    file = 'pubspec.yaml';
-}
+let file = core.getInput("file");
 
 fs.readFile(
     file,

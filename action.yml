@@ -3,7 +3,7 @@ description: "Upload file to Synology Nas"
 inputs:
   file:
     required: false
-    default: pubspec.yml
+    default: pubspec.yaml
     description: The location of pubspec.yml include file name.
 
 runs:
