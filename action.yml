@@ -1,0 +1,15 @@
+name: "Flutter version read" 
+description: "Upload file to Synology Nas" 
+inputs:
+  file:
+    required: false
+    default: pubspec.yml
+    description: The location of pubspec.yml include file name.
+
+runs:
+  using: "node12"
+  main: "dist/index.js"
+  
+branding:
+  icon: arrow-up-circle
+  color: blue
