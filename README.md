@@ -10,9 +10,14 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+  
+    - uses: actions/checkout@v2
+
     - name: Get Flutter Version
       id: flutter_version
       uses: bungabear/flutter_version_read@main
+      with:
+        file: example/pubspec.yml
 
     - name: Flutter App Version Number
       run: echo 'version_number:' ${{ steps.flutter_version.outputs.version_number }}
@@ -21,13 +26,14 @@ jobs:
       run: echo 'build_number:' ${{ steps.flutter_version.outputs.build_number }}
       
     - name: Flutter App Version Number Major
-      run: echo 'version_number_major:' ${{ steps.flutter_version.outputs.version_number_majojr }}
+      run: echo 'version_number_major:' ${{ steps.flutter_version.outputs.version_number_major }}
       
     - name: Flutter App Version Number Minor
       run: echo 'version_number:' ${{ steps.flutter_version.outputs.version_number_minor }}
       
     - name: Flutter App Version Number Patch
       run: echo 'version_number:' ${{ steps.flutter_version.outputs.version_number_patch }}
+
 
 ```
 

@@ -24,7 +24,7 @@ jobs:
       run: echo 'build_number:' ${{ steps.flutter_version.outputs.build_number }}
       
     - name: Flutter App Version Number Major
-      run: echo 'version_number_major:' ${{ steps.flutter_version.outputs.version_number_majojr }}
+      run: echo 'version_number_major:' ${{ steps.flutter_version.outputs.version_number_major }}
       
     - name: Flutter App Version Number Minor
       run: echo 'version_number:' ${{ steps.flutter_version.outputs.version_number_minor }}
